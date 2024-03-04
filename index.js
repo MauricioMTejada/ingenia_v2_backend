@@ -8,9 +8,9 @@ const cors = require("cors");
 
 const port = process.env.PORT || 3002;
 
-const router = require("./routes/index.routes.js");
+const router = require("./src/routes/index.routes.js");
 
-const { sequelize } = require("./database.js");
+const { sequelize } = require("./src/database.js");
 
 const server = express();
 
