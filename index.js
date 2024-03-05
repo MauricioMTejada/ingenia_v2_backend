@@ -56,7 +56,7 @@ const server = express();
             <title>Hello World!</title>
         </head>
         <body>
-         <h1>Hello World!</h1>
+         <h1>Segunda prueba</h1>
          </body>
          </html>`;
 
