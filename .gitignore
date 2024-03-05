@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 # dotenv environment variables file
+.env
 api/.env
 client/.env
 
