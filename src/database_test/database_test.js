@@ -8,7 +8,7 @@ const pg = require("pg");
 
 const pool = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: true // comment: in line DB - discomment in local DB
+//   ssl: true // comment: in line DB - discomment in local DB
 });
 
 module.exports = { pool };
