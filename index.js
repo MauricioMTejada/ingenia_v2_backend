@@ -1,10 +1,10 @@
-require("dotenv").config();
+// require("dotenv").config();
 
 const express = require("express");
 
-const bodyParser = require("body-parser");
-const morgan = require("morgan");
-const cors = require("cors");
+// const bodyParser = require("body-parser");
+// const morgan = require("morgan");
+// const cors = require("cors");
 
 const port = process.env.PORT || 3002;
 
