@@ -2,9 +2,10 @@ const { Router } = require("express");
 
 const router = Router();
 
-router.get('/', (req, res) => {
-    const htmlResponse =
-    `<html>
+const courseRouter = require("./course.routes");
+
+router.get("/", (req, res) => {
+	const htmlResponse = `<html>
         <head>
             <title>Estoy</title>
         </head>
@@ -13,7 +14,9 @@ router.get('/', (req, res) => {
          </body>
          </html>`;
 
-    res.send(htmlResponse);
-  });
+	res.send(htmlResponse);
+});
 
-  module.exports = router;
+router.use("/courses", courseRouter);
+
+module.exports = router;

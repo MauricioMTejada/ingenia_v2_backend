@@ -49,20 +49,6 @@ server.use("/", router);
 //     console.log(err);
 //   });
 
-  // server.get('/', (req, res) => {
-  //   const htmlResponse =
-  //   `<html>
-  //       <head>
-  //           <title>Hello World!</title>
-  //       </head>
-  //       <body>
-  //        <h1>Segunda prueba</h1>
-  //        </body>
-  //        </html>`;
-
-  //   res.send(htmlResponse);
-  // });
-
   server.listen(port, () => {
     console.log(`Server running on port ${port}`);
   });
