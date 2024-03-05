@@ -14,14 +14,14 @@ const port = process.env.PORT || 3002;
 
 const server = express();
 
-// const corsOptions = {
-//   origin: "*",
-// };
+const corsOptions = {
+  origin: "*",
+};
 
-// server.use(cors(corsOptions));
-// server.use(bodyParser.json({ limit: "10mb", extended: true }));
-// server.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
-// server.use(morgan("dev"));
+server.use(cors(corsOptions));
+server.use(bodyParser.json({ limit: "10mb", extended: true }));
+server.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
+server.use(morgan("dev"));
 
 // // Imprimo en consola el pedido:
 // /*   server.use((req, res, next) => {
