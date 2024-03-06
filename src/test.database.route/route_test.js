@@ -1,20 +1,20 @@
 
 const { Router } = require("express");
 
-const getCourseHandlers = Router();
+const route_test = Router();
 
-getCourseHandlers.get('/', (req, res) => {
+route_test.get('/', (req, res) => {
     const htmlResponse =
     `<html>
         <head>
             <title>Courses</title>
         </head>
         <body>
-         <h1>Estoy en 'handlers/course/course.handlers.js'</h1>
+         <h1>Estoy en 'test_route'</h1>
          </body>
          </html>`;
 
     res.send(htmlResponse);
   });
 
-  module.exports = getCourseHandlers;
+  module.exports = route_test;
