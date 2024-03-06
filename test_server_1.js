@@ -34,7 +34,7 @@ server.use((req, res, next) => {
 // Test - Base de datos sin Sequelize
 
 const pool = new pg.Pool({
-	connectionString: process.env.DATABASE_URL,
+	connectionString: process.env.DATABASE_URL_EXTERNAL,
 	ssl: true // comment: in line DB - discomment in local DB
   });
 

@@ -2,6 +2,7 @@ const express = require('express');
 const { Sequelize, DataTypes } = require("sequelize");
 const databaseTest = express.Router();
 
+/* DB local:
 // Variables de entorno
 const { DB_USER, DB_PASSWORD, DB_HOST, DB, DB_PORT } = process.env;
 
@@ -12,7 +13,16 @@ const sequelize = new Sequelize(
     logging: false, // Establecer en console.log para ver las consultas SQL sin procesar
     native: false, // Permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
   }
-);
+);*/
+
+
+// Crear una instancia de Sequelize
+const sequelize = new Sequelize(
+  process.env.DATABASE_URL_INTERNAL,
+  {
+    logging: false, // Establecer en console.log para ver las consultas SQL sin procesar
+    native: false, // Permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
+  });
 
 
 // Definir el modelo

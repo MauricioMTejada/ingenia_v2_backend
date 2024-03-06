@@ -27,7 +27,7 @@ Consta en cambiar el nombre original de los siguientes archivos al de "index.js"
 - server_production: archivo de servidor para producción
 
 # Explanation of the functioning of the backend
-# para levantar el servidor => npm run dev
+para levantar el servidor => `npm start`
 ## Explanation of the folders
 
 - ### src
