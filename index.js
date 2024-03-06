@@ -7,7 +7,7 @@
 	const router = require("./src/routes/test_index.routes.js");
 	const { Result } = require("express-validator");
 	// const { sequelize } = require("./src/database.js");
-	const { sequelize, } = require("./src/test.database.route/database_test(with_sequelize).js");
+	const { sequelize, } = require("./src/test.database.route/database_test.js");
 	const { pool, } = require("./src/test.database.route/database_test_(without_sequelize).js");
 
 // constants

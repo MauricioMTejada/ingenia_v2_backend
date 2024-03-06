@@ -3,7 +3,7 @@ const { Router } = require("express");
 const router = Router();
 
 const test_route = require("../test.database.route/route_test");
-const { databaseTest, } = require("../test.database.route/database_test(with_sequelize)");
+const { databaseTest, } = require("../test.database.route/database_test");
 
 router.get("/", (req, res) => {
 	const htmlResponse = `<html>

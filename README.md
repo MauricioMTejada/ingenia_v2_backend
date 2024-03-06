@@ -12,7 +12,17 @@ Consta en cambiar el nombre original de los siguientes archivos al de "index.js"
   - tener en cuenta si la prueba se realiza de manera locar o en el deploy: hay que descomentar línea 'ssl' de la constate "pool"
   - en éste archivo no se utiliza archivo otro archivo para "rutear"
 
-- test_server(2): es el archivo para probar el servidor y la BD cons "sequelize" y una ruta de prueba
+- test_server(2): es el archivo para probar el servidor y la BD con "sequelize" y una ruta de prueba
+
+  - solicitud: `<GET> "<root>/"`
+  - solicitud: `<GET> "<root>/test_route"`
+  - solicitud: `<POST>  "<root>/db_test"`
+
+    JSON:
+    {
+        "field1": "Valor del campo 3",
+        "field2": "Valor del campo 4"
+    }
 
 - server_production: archivo de servidor para producción
 
