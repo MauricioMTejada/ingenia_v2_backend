@@ -14,15 +14,23 @@ const functionUser =require('./models/User');
 const functionFavorite = require('./models/Favorite');
 const user = require("./controllers/userControllers/userPrueba");
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DB, DB_PORT } = process.env;
+// const { DB_USER, DB_PASSWORD, DB_HOST, DB, DB_PORT } = process.env;
 
+// const sequelize = new Sequelize(
+//   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB}`,
+//   {
+//     logging: false, // establecer en console.log para ver las consultas SQL sin procesar
+//     native: false, // permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
+//   }
+// );
+
+// Crear una instancia de Sequelize
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB}`,
+  process.env.DATABASE_URL_INTERNAL,
   {
-    logging: false, // establecer en console.log para ver las consultas SQL sin procesar
-    native: false, // permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
-  }
-);
+    logging: false, // Establecer en console.log para ver las consultas SQL sin procesar
+    native: false, // Permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
+  });
 
 functionAssessment(sequelize);
 functionCategory(sequelize);
@@ -75,4 +83,3 @@ module.exports = {
   sequelize,
   ...sequelize.models,
 };
-
