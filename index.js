@@ -33,14 +33,14 @@
 	});
 
 // print errors in console
-// server.use((err, req, res, next) => {
-//   console.error(err);
-//   res.status(500).send({ error: err.message });
-// });
+	// server.use((err, req, res, next) => {
+	//   console.error(err);
+	//   res.status(500).send({ error: err.message });
+	// });
 
 
 // Base de Datos:
-	sequelize.sync({ force: true }); // Para resetear DB: "force: true"
+	sequelize.sync({ alter: true }); // Para resetear DB: "force: true"
 		console.log(`Database & tables created`);
 		server.listen(port, () => {
 			console.log(cyan('Server Ingenia v2'));
