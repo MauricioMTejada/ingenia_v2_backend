@@ -8,8 +8,8 @@
 	const morgan = require("morgan");
 	const cors = require("cors");
 	const { cyan } = require('colorette');
-	const { sequelize, } = require("./src/test.database.route/database_test.js"); // editar con la nueva base de datos
-	const router = require("./src/routes/test_index.routes.js"); // editar con el nuevo router
+	const { sequelize, } = require("./src/database");
+	const router = require("./src/routes/index.routes");
 
 // constants
 	const port = process.env.PORT || 3002;
