@@ -32,11 +32,15 @@ server.use((req, res, next) => {
 
 
 // Test - Base de datos sin Sequelize
+	// const pool = new pg.Pool({
+	// 	connectionString: process.env.DATABASE_URL_EXTERNAL,
+	// 	// ssl: true // comment: in line DB - discomment in local DB
+	// });
 
-const pool = new pg.Pool({
-	connectionString: process.env.DATABASE_URL_EXTERNAL,
-	// ssl: true // comment: in line DB - discomment in local DB
-  });
+// Vercel Config:
+	const pool = new pg.Pool({
+		connectionString: process.env.POSTGRES_URL ,
+	})
 
 server.get("/", (req, res) => {
 	const htmlResponse = `<html>
