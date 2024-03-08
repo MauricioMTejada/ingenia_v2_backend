@@ -48,12 +48,7 @@ const DatabaseTestModel = sequelize.define('DatabaseTestModel', {
     field2: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    field3: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    // Agrega más campos según sea necesario
+    }
   });
 
   // Función para crear un nuevo registro
