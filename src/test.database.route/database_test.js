@@ -49,6 +49,10 @@ const DatabaseTestModel = sequelize.define('DatabaseTestModel', {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    field3: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     // Agrega más campos según sea necesario
   });
 
