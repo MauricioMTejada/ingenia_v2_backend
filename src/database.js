@@ -36,11 +36,15 @@ const user = require("./controllers/userControllers/userPrueba");
 
 //* deploy config (Vercel):
 const sequelize = new Sequelize(
-	process.env.POSTGRES_URL,
-	{
-	  logging: false, // Establecer en console.log para ver las consultas SQL sin procesar
-	  native: false, // Permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
-	});
+    process.env.POSTGRES_URL,
+    {
+      dialectModule: pg
+    }
+    // {
+    //   logging: false, // Establecer en console.log para ver las consultas SQL sin procesar
+    //   native: false, // Permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
+    // }
+    );
 
 functionAssessment(sequelize);
 functionCategory(sequelize);

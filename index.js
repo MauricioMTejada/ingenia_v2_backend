@@ -1,5 +1,5 @@
 // 	Nombre original del archivo:
-// 	test_server_2.js
+// 	server_production.js
 
 // importations
 	require("dotenv").config();
@@ -7,9 +7,9 @@
 	const bodyParser = require("body-parser");
 	const morgan = require("morgan");
 	const cors = require("cors");
-	const router = require("./src/routes/test_index.routes.js");
-	const { sequelize, } = require("./src/test.database.route/database_test.js");
 	const { cyan } = require('colorette');
+	const { sequelize, } = require("./src/database");
+	const router = require("./src/routes/index.routes");
 
 // constants
 	const port = process.env.PORT || 3002;
@@ -32,12 +32,17 @@
 		next();
 	});
 
+// print errors in console
+	// server.use((err, req, res, next) => {
+	//   console.error(err);
+	//   res.status(500).send({ error: err.message });
+	// });
 
-// Test - Base de datos con Sequelize
 
+// Base de Datos:
 	sequelize.sync({ force: true }); // Para resetear DB: "force: true"
-	console.log(`Database & tables created`);
-	server.listen(port, () => {
-		console.log(cyan('Test Database with sequelize'));
-		console.log(`Server is listening on port ${port}`);
-	});
+		console.log(`Database & tables created`);
+		server.listen(port, () => {
+			console.log(cyan('Server Ingenia v2'));
+			console.log(`Server is listening on port ${port}`);
+		});
