@@ -24,13 +24,13 @@ const sequelize = new Sequelize(
 //     native: false, // Permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
 //   });
 
-  // Crear una instancia de Sequelize (Vercel)
-const sequelize = new Sequelize(
-  process.env.POSTGRES_URL,
-  {
-    logging: false, // Establecer en console.log para ver las consultas SQL sin procesar
-    native: false, // Permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
-  });
+// Crear una instancia de Sequelize (Vercel)
+  const sequelize = new Sequelize(
+    process.env.POSTGRES_URL,
+    {
+      logging: false, // Establecer en console.log para ver las consultas SQL sin procesar
+      native: false, // Permite que Sequelize sepa que podemos usar pg-native para ~30% más de velocidad
+    });
 
 
 // Definir el modelo
