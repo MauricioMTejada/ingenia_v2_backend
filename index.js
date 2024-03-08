@@ -40,7 +40,7 @@
 
 
 // Base de Datos:
-	sequelize.sync({ alter: true }); // Para resetear DB: "force: true"
+	sequelize.sync({ force: true }); // Para resetear DB: "force: true"
 		console.log(`Database & tables created`);
 		server.listen(port, () => {
 			console.log(cyan('Server Ingenia v2'));
