@@ -35,7 +35,7 @@ server.use((req, res, next) => {
 
 const pool = new pg.Pool({
 	connectionString: process.env.DATABASE_URL_EXTERNAL,
-	ssl: true // comment: in line DB - discomment in local DB
+	// ssl: true // comment: in line DB - discomment in local DB
   });
 
 server.get("/", (req, res) => {
