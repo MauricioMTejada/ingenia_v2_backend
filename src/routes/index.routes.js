@@ -6,8 +6,11 @@ const instructorRouter = require("./instructor.routes");
 const categoryRoutes = require("./category.routes");
 const rellenarRouter = require("./rellenar.router");
 const buyRoutes = require("./buyRoutes");
+const wellcome = require("./wellcomeRoute");
 
 const router = Router();
+
+router.use("/", wellcome);
 
 router.use("/instructor", instructorRouter);
 
