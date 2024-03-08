@@ -1,4 +1,5 @@
 const express = require('express');
+const pg = require("pg");
 const { Sequelize, DataTypes } = require("sequelize");
 const databaseTest = express.Router();
 
